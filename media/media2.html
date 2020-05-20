@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans";
+        background-color: #ecf0f1;
+      }
+      .container {
+        max-width: 60rem;
+        width: 100%;
+        margin: 2rem auto;
+      }
+      .flexbg {
+        display: flex;
+      }
+      .flexbg main {
+        order: 2;
+        background-color: white;
+        padding: 25px;
+      }
+      .flexbg .sidebar {
+        width: 20%;
+        padding: 25px;
+        color: white;
+      }
+      .flexbg .left {
+        order: 1;
+        background-color: #3498db;
+      }
+      .flexbg .right {
+        order: 3;
+        background-color: #34495e;
+      }
+      /* 태블릿 화면 */
+      @media screen and (max-width: 758px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          order: 1;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+        .flexbg .right {
+          order: 3;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+      }
+      /* 모바일 화면 */
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam quae
+          totam in neque excepturi minus eligendi ex aspernatur aliquam facere,
+          possimus hic provident facilis amet veniam officia. Tenetur, eos
+          facere.
+        </p>
+        <p>
+          Consectetur animi quasi accusantium architecto debitis ullam sint
+          autem, deleniti, doloribus unde esse, illo provident porro beatae
+          dolorum iure voluptas sed. Quis labore, est optio esse sequi eum
+          magnam rerum.
+        </p>
+      </main>
+      <aside class="sidebar left">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+          doloremque!
+        </p>
+      </aside>
+      <aside class="sidebar right">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores,
+          corporis.
+        </p>
+      </aside>
+    </div>
+  </body>
+</html>
